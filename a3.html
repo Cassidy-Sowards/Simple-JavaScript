@@ -1,0 +1,90 @@
+<!-----
+Author: Cassidy Sowards
+Assignment 3
+------>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Assignment 3</title>
+
+<style>
+body{
+	background-color: LightGreen;
+	color: Navy;
+	text-align: center;
+}
+table{
+	background-color: LightBlue;
+	margin-left: 500px;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Number and Phrase Evaluator</h1>
+<h1 id="today"></h1>
+<table id="bombfield" name="bombfield" border="3">
+<tr><td></td></tr>
+</table>
+
+<script>
+var d = new Date();
+document.getElementById("today").innerHTML = d;
+</script>
+
+<script>
+
+	var colorInput = prompt("Please enter the border color you want for your output box: yellow, purple, or orange only");
+	if(colorInput == "yellow" || colorInput == "purple" || colorInput == "orange"){
+	document.getElementById("bombfield").style.borderColor = colorInput;
+	var num = prompt("Enter an integer in the text field");
+		if(num >= 'a' && num <= 'z'){
+			alert("Invalid input. Reload and try again.")
+		}
+		else{
+		var word = prompt("Enter a word in the text field. Use all alphabetic characters");
+			if((word >= 'a' && word <= 'z') || (word >= 'A' && word <= 'Z')) {
+			var letter = prompt("Enter a letter in the text field.");
+				if(letter >= 'a' && letter <= 'z'){
+					document.getElementById("bombfield").innerHTML = "You entered " + num + "</br> You word is " + word + "</br> The letter you entered is " + letter;
+				}
+				else{
+					alert("Invalid input. Reload and try again.")
+				}
+			}
+			
+			else{
+				alert("Invalid input. Reload and try again.");
+			}
+		}
+		 
+	}
+	else{
+	alert("Invalid Color! border will be set to black");
+	document.getElementById("bombfield").style.borderColor = black;
+		var num = prompt("Enter an integer in the text field");
+		if(num >= 'a' && num <= 'z'){
+			alert("Invalid input. Reload and try again.")
+		}
+		else{
+		var word = prompt("Enter a word in the text field. Use all alphabetic characters");
+			if((word >= 'a' && word <= 'z') || (word >= 'A' && word <= 'Z')) {
+			var letter = prompt("Enter a letter in the text field.");
+				if(letter >= 'a' && letter <= 'z'){
+					document.getElementById("bombfield").innerHTML = "You entered " + num + "</br> You word is " + word + "</br> The letter you entered is " + letter;
+				}
+				else{
+					alert("Invalid input. Reload and try again.")
+				}
+			}
+			
+			else{
+				alert("Invalid input. Reload and try again.");
+			}
+		}
+	}
+</script>
+
+</body>
+</html>
